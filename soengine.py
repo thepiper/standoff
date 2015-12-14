@@ -6,7 +6,7 @@ import datetime
 
 app = Flask(__name__)
 
-env = Environment(loader=PackageLoader('standoffish', 'templates'))
+env = Environment(loader=PackageLoader('standoffish'))
 
 
 @app.route('/')
