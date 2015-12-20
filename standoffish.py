@@ -15,12 +15,15 @@ def root():
 
 
 @app.route('/0')
-def home(currYear = datetime.date.today().year):
+def home():
     homeTemplate = env.get_template("home.html")
     return render_template ( 
             homeTemplate, 
-            year = currYear, 
+            year = datetime.date.today().year, 
+            css = url_for('static', filename='sobase.css'),
             title = 0 )
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
+    

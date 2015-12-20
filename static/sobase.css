@@ -32,14 +32,33 @@
 	.col-11 {width: 91.66%;}
 	.col-12 {width: 100%;}
 }
+h1, h2, body {
+	line-height: 1.618;
+}
+
+h1, h2 {
+	font-family: "Marine UP", "Segoe UI", Helvetica, sans-serif;
+}
+
 h1 {
-	font-family: "Gidole", "Segoe UI", Helvetica, sans-serif;
-	font-size: 4.236em;
+	font-size: 1.618em;
 	font-weight: bold;
 }
 
-body {
-	font-family: "Achille FY", "Constantia", "Baskerville", Serif;
-	font-size: 1em;
-	line-height: 1.618;
+h2 {
+	font-size: 0.618em;
+	text-transform: uppercase;
 }
+
+
+p {
+	font-family: "Achille FY L", "Constantia", "Baskerville", Serif;
+	font-size: 1em;
+	text-indent: 10%;
+}
+
+.quote { font-style: italic; }
+.tag { text-transform: uppercase}
+
+
+
