@@ -1,7 +1,12 @@
-body {
+#content {
 	line-height: 1.618;
-	width: 61.8%;
-	margin-left: 14.6%;
+	width: 51.8%;
+	margin-left: 18.6%;
+}
+
+#footer {
+	text-align: center;
+	font-size: 0.618em;
 }
 
 h1, h2 {
@@ -9,8 +14,8 @@ h1, h2 {
 }
 
 h1 {
-	margin-left: 14px;
-	font-size: 1.618em;
+/*	margin-left: 34px;*/
+	font-size: 2.618em;
 	font-weight: bold;
 }
 
@@ -30,7 +35,7 @@ p {
 .tag { text-transform: uppercase}
 
 @media only screen and (orientation: portrait) {
-	body {
+	#content {
 		width: 76.4%;
 	}
 }
