@@ -1,3 +1,143 @@
+/*------< fonts >------*/
+
+/* Achille FY - 4 styles */
+@font-face {
+	font-family: "Achille FY";
+	src: url(fonts/achille/regular.woff);
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Achille FY";
+	src: url(fonts/achille/black.woff);
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Achille FY";
+	src: url(fonts/achille/italic.woff);
+	font-style: italic;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Achille FY";
+	src: url(fonts/achille/blackitalic.woff);
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* Fantasque Sans Mono - 4 styles */
+
+@font-face {
+	font-family: "Fantasque Mono";
+	src: url(fonts/fantasque/regular.woff);
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Fantasque Mono";
+	src: url(fonts/fantasque/black.woff);
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Fantasque Mono";
+	src: url(fonts/fantasque/italic.woff);
+	font-style: italic;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Fantasque Mono";
+	src: url(fonts/fantasque/blackitalic.woff);
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* Marine - 6 styles */
+
+@font-face {
+  font-family: 'Marine Light';
+  src: url('fonts/marine-light.eot'); /* IE9 Compat Modes */
+  src: url('fonts/marine-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/marine-light.woff') format('woff'), /* Modern Browsers */
+       url('fonts/marine-light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/marine-light.svg#668bacda16b4417e14d416a7bc418d09') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+  font-family: 'Marine Light Italic';
+  src: url('fonts/marine-light-italic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/marine-light-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/marine-light-italic.woff') format('woff'), /* Modern Browsers */
+       url('fonts/marine-light-italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/marine-light-italic.svg#758a7ab10546caac8a969bc00f6adc5d') format('svg'); /* Legacy iOS */
+       
+  font-style:   italic;
+  font-weight:  200;
+}
+
+@font-face {
+  font-family: 'Marine Regular';
+  src: url('fonts/marine-regular.eot'); /* IE9 Compat Modes */
+  src: url('fonts/marine-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/marine-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/marine-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/marine-regular.svg#801a61583a73f5c3e28d34771df22617') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Marine Regular Italic';
+  src: url('fonts/marine-regular-italic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/marine-regular-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/marine-regular-italic.woff') format('woff'), /* Modern Browsers */
+       url('fonts/marine-regular-italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/marine-regular-italic.svg#cabd93aac14ce088a8090b65577545be') format('svg'); /* Legacy iOS */
+       
+  font-style:   italic;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Marine Bold';
+  src: url('fonts/marine-bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/marine-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/marine-bold.woff') format('woff'), /* Modern Browsers */
+       url('fonts/marine-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/marine-bold.svg#4d4e3542a168d30a446e35b9de7c1c32') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Marine Bold Italic';
+  src: url('fonts/marine-bold-italic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/marine-bold-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/marine-bold-italic.woff') format('woff'), /* Modern Browsers */
+       url('fonts/marine-bold-italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/marine-bold-italic.svg#b61bdd012f2020a3e9cf8bf8680ed7ce') format('svg'); /* Legacy iOS */
+       
+  font-style:   italic;
+  font-weight:  700;
+}
+
+/*------< fonts end >------*/
+
+
+/*------< main styling >------*/
+
 #content {
 	line-height: 1.618;
 	width: 51.8%;
@@ -10,13 +150,12 @@
 }
 
 h1, h2 {
-	font-family: "Marine UP", "Segoe UI", Helvetica, sans-serif;
+	font-family: "Marine Bold",  "Segoe UI", Helvetica, sans-serif;
 }
 
 h1 {
 /*	margin-left: 34px;*/
 	font-size: 2.618em;
-	font-weight: bold;
 }
 
 h2 {
@@ -26,7 +165,7 @@ h2 {
 
 
 p {
-	font-family: "Achille FY L", "Constantia", "Baskerville", Serif;
+	font-family: "Achille FY", "Constantia", "Baskerville", serif;
 	font-size: 1em;
 	text-indent: 10%;
 }
@@ -34,9 +173,15 @@ p {
 .quote { font-style: italic; }
 .tag { text-transform: uppercase}
 
+/*------< main styling end >------*/
+
+
+/*------< media queries >------*/
+
 @media only screen and (orientation: portrait) {
 	#content {
 		width: 76.4%;
 	}
 }
 
+/*------< media queries end >------*/
