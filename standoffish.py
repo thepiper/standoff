@@ -16,16 +16,25 @@ def root():
 
 @app.route('/0')
 def home():
-    post = render_template('content/2016-01-18.html')
-    year = datetime.date.today().year
     css = url_for('static', filename='sobase.css')
-    title = 0 
-    
-    return render_template ([baseTemplate, year, css, title, post])
+    post = [] 
+    return render_template (
+                    baseTemplate,
+                    post = post,
+                    year = datetime.date.today().year,
+                    css = css,
+                    title = 0
+                    )
+ 
 
 @app.route('/photography')
 def photography():
     galleryTemplate = env.get_template('gallery.html')
+
+def getPost():
+    
+
+    return "finish this function"
     
 
 if __name__ == '__main__':

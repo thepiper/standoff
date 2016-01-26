@@ -14,7 +14,11 @@
 		hihi
 	</div>
 	<div id="post">
-		{% include '2016-01-18.html' %}	
+		<h1>{{ postTitle }}</h1>
+		<h2>{{ postSubhead }}</h2>
+		{% for paragraph in postBody %}
+			<p> {{ paragraph }}
+		{% endfor %}
 	</div>
 	<div id="footer">
 		{% block footer %}
