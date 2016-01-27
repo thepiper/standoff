@@ -26,5 +26,6 @@ def updateDB():
         date = post.readline()
         content = post.readlines()
 
+    
 
     return
