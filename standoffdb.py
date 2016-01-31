@@ -21,10 +21,10 @@ def updateDB():
     postPaths = updatePostDir()
 
     for path in postPaths:
-        post = open(path, 'r')
-        title = post.readline()
-        date = post.readline()
-        content = post.readlines()
+        postFile = open(path, 'r')
+        postuple = ( postFile.readline(), 
+                    postFile.readline(), 
+                    postFile.readlines() )
 
     
 
