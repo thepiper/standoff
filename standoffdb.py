@@ -26,7 +26,7 @@ def updateDB():
         postuple = ( postFile.readline(), 
                     postFile.readline(), 
                     postFile.readlines() )
-        crsrPostsDB.execute("")
+        crsrPostsDB.execute("insert into posts value (?,?,?)", postuple)
 
     return
 
