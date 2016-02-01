@@ -17,6 +17,7 @@ def updatePostDir ():
     return postPaths
 
 def updateDB():
+    initDB()
 
     postPaths = updatePostDir()
 
@@ -25,7 +26,10 @@ def updateDB():
         postuple = ( postFile.readline(), 
                     postFile.readline(), 
                     postFile.readlines() )
-
-    
+        crsrPostsDB.execute("")
 
     return
+
+def initDB():
+    crsrPostsDB.execute("create table if not exists posts (title, date, content)")
+
