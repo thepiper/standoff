@@ -17,7 +17,8 @@ def root():
 @app.route('/0')
 def home():
     css = url_for('static', filename='sobase.css')
-    post = [] 
+    POSTS = [] 
+    POSTS
     return render_template (
                     baseTemplate,
                     post = post,

@@ -6,9 +6,10 @@ crsrPostsDB = connPostsDB.cursor()
 
 
 
-def updatePostDir ():
+def postDir ():
     contentDir = Path ('./static/text/')
     postPaths = []
+
     for path in contentDir.iterdir():
         if path.is_file() :
             path = str (path)
@@ -16,20 +17,34 @@ def updatePostDir ():
 
     return postPaths
 
+
 def updateDB():
     initDB()
-
-    postPaths = updatePostDir()
+    postPaths = postDir()
 
     for path in postPaths:
         postFile = open(path, 'r')
-        postuple = ( postFile.readline(), 
-                    postFile.readline(), 
-                    postFile.readlines() )
-        crsrPostsDB.execute("insert into posts value (?,?,?)", postuple)
+        h = postFile.readline()
+        d = postFile.readline()
+        t = ""
 
-    return
+        for line in postFile.readlines():
+            t += line
+
+        postuple = (h, d, t)
+
+        crsrPostsDB.execute("insert or ignore into posts values (?,?,?)", postuple)
+
+    connPostsDB.commit()
+
+def getPosts():
+    crsrPostsDB.execute("select * from posts")
+    connPostsDB.commit()
+
+    return crsrPostsDB.fetchall()
+
 
 def initDB():
-    crsrPostsDB.execute("create table if not exists posts (title, date, content)")
+    crsrPostsDB.execute("create table if not exists posts (title PRIMARY KEY, date, content)")
+    connPostsDB.commit()
 
